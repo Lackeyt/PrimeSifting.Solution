@@ -3,13 +3,15 @@ using System.Collections.Generic;
 
 namespace PrimeSifting.Models
 {
-  public class PrimeList
+  public class UserNumber
   {
+    public int UserInput;
     private List<int> _numbers = new List<int> {};
 
-    public PrimeList(int userNumber)
+    public UserNumber(int num)
     {
-      for(int index = 2; index <= userNumber; index++)
+      UserInput = num;
+      for(int index = 2; index <= num; index++)
       {
         _numbers.Add(index);
       }
@@ -20,9 +22,21 @@ namespace PrimeSifting.Models
       return _numbers;
     }
 
-    // public static void ClearAll()
-    // {
-    //   _numbers.Clear();
-    // }
+    public List<int> PrimeList()
+    {
+      // int prime = 2;
+      // while(prime < this.UserInput)
+      // {
+      //   foreach (int element in _numbers)
+      //   {
+      //     if(element > prime && element % prime == 0)
+      //     {
+      //       _numbers.Remove(element);
+      //     }
+      //   }
+      //   prime += 1;
+      // }
+      return _numbers;
+    }
   }
 }
