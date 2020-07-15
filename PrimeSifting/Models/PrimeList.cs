@@ -5,23 +5,24 @@ namespace PrimeSifting.Models
 {
   public class PrimeList
   {
-    // private static List<int> _numbers = new List<int> {};
+    private List<int> _numbers = new List<int> {};
 
-    public PrimeList()
+    public PrimeList(int userNumber)
     {
-      //_numbers.Add(userNumber);
+      
+
+        _numbers.Add(index);
+
     }
 
-    // public static List<int> GetAll()
-    // {
-    //   return _numbers;
-    // }
+    public List<int> GetAll()
+    {
+      return _numbers;
+    }
 
     // public static void ClearAll()
     // {
     //   _numbers.Clear();
     // }
   }
-
-  
 }
