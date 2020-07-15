@@ -9,10 +9,10 @@ namespace PrimeSifting.Models
 
     public PrimeList(int userNumber)
     {
-      
-
+      for(int index = 2; index <= userNumber; index++)
+      {
         _numbers.Add(index);
-
+      }
     }
 
     public List<int> GetAll()
