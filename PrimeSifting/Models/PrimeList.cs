@@ -6,7 +6,7 @@ namespace PrimeSifting.Models
   public class UserNumber
   {
     public int UserInput;
-    private List<int> _numbers = new List<int> {};
+    public List<int> _numbers = new List<int> {};
 
     public UserNumber(int num)
     {
@@ -24,19 +24,21 @@ namespace PrimeSifting.Models
 
     public List<int> PrimeList()
     {
-      // int prime = 2;
-      // while(prime < this.UserInput)
-      // {
-      //   foreach (int element in _numbers)
-      //   {
-      //     if(element > prime && element % prime == 0)
-      //     {
-      //       _numbers.Remove(element);
-      //     }
-      //   }
-      //   prime += 1;
-      // }
-      return _numbers;
+      int prime = 2;
+      //List<int> values = this._numbers;
+      while(prime < this.UserInput)
+      {
+        for(int index=0; index < this._numbers.Count; index++)
+        {
+          if(this._numbers[index] > prime && this._numbers[index] % prime == 0)
+          {
+            this._numbers.Remove(this._numbers[index]);
+          }
+        }
+        prime += 1;
+      }
+      return this._numbers;
     }
   }
+  
 }
